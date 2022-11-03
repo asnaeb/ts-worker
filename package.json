@@ -1,5 +1,5 @@
 {
-  "name": "@soffyo/ts-worker",
+  "name": "@asnaeb/ts-worker",
   "version": "1.0.0",
   "main": "worker.js",
   "files": ["worker.js", "worker.d.ts"],
