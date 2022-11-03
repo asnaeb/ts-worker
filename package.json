@@ -4,6 +4,7 @@
   "main": "index.js",
   "files": [
     "index.js",
+    "worker.js",
     "index.d.ts"
   ],
   "types": "index.d.ts",
