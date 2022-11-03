@@ -1,5 +1,5 @@
 import {isMainThread, parentPort} from 'node:worker_threads'
-import {TsWorker} from './worker'
+import {TsWorker} from './index'
 import * as assert from 'assert'
 
 if (isMainThread) {
