@@ -1,0 +1,19 @@
+{
+  "name": "ts-worker",
+  "version": "1.0.0",
+  "main": "worker.js",
+  "types": "worker.d.ts",
+  "scripts": {
+    "test": "ts-node test.ts"
+  },
+  "author": "ansaeb",
+  "license": "GPL-3.0-or-later",
+  "keywords": ["worker_threads", "typescript", "ts-worker"],
+  "description": "Node.js Worker class compatible with typescript files",
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
