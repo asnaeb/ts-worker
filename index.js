@@ -1,9 +1,9 @@
-import {Worker} from 'node:worker_threads';
-import {readFileSync} from 'node:fs';
-import {resolve} from 'node:path';
-import ts from 'typescript';
+const {Worker} = require('node:worker_threads');
+const {readFileSync} = require('node:fs');
+const {resolve} = require('node:path');
+const ts = require('typescript');
 
-export class TsWorker extends Worker {
+module.exports.TsWorker = class extends Worker {
     constructor(path, options = {}) {
         const file = readFileSync(resolve(path), {encoding: 'utf-8'});
 

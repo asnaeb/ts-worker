@@ -1,13 +1,9 @@
 import {parentPort, isMainThread} from 'node:worker_threads'
 
 if (!isMainThread) {
-    parentPort?.on('message', data => {
-        let response: 'world'
-
-        if (data === 'hello') {
-            response = 'world'
-            parentPort?.postMessage(`${data} ${response}`)
-        }
+    parentPort?.on('message', (data: string) => {
+        if (data === 'work')
+            parentPort?.postMessage('I am working')
     })
 }
 else
