@@ -1,13 +1,11 @@
 import {Worker, WorkerOptions} from 'node:worker_threads'
+import {CompilerOptions} from 'typescript'
 
-type TsWorkerOptions = Omit<WorkerOptions, 'workerData'> &
-    {
-        workerData: {
-            [k:string]: any
-            path?: never
-        }
-    }
+interface TsWorkerOptions extends Omit<WorkerOptions, 'workerData' | 'eval'> {
+    workerData: {[k: string]: any; path?: never}
+    compilerOptions?: CompilerOptions
+}
 
 export declare class TsWorker extends Worker {
-    constructor(filename: string, options?: TsWorkerOptions)
+    constructor(path: string, options?: TsWorkerOptions)
 }
