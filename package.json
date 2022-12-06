@@ -1,6 +1,6 @@
 {
   "name": "@asnaeb/ts-worker",
-  "version": "1.0.32",
+  "version": "1.1.0",
   "type": "module",
   "main": "index.js",
   "files": [
